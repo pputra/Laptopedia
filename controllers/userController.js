@@ -24,11 +24,13 @@ class userController {
                 password:req.body.password
             }
         }).then((user) => {
+            console.log(user);
             if (user) {
                 req.session.user = {
                     username:req.body.username,
                     password:req.body.password
                 }
+                console.log(req.session.user);
                 res.redirect(`/${req.body.username}/products`);
             } else {
                 res.redirect('/users/login');

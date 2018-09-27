@@ -11,10 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
 
 app.use(session({
-    secret: 'keyboard dog',
-    resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
+    secret: 'keyboard dog'
   }))
 
 app.use('/', routes);
