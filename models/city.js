@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     postal_code: DataTypes.INTEGER
   }, {});
   City.associate = function(models) {
-    City.belongsTo(models.Payment);
+    City.hasMany(models.Payment);
   };
   return City;
 };

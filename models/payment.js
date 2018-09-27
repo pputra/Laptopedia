@@ -8,8 +8,8 @@ module.exports = (sequelize, DataTypes) => {
     isComplete: DataTypes.BOOLEAN
   }, {});
   Payment.associate = function(models) {
-    Payment.belongsTo(models.Order);
-    Payment.hasMany(models.CityId);
+    Payment.hasMany(models.Order);
+    Payment.belongsTo(models.City);
   };
   return Payment;
 };

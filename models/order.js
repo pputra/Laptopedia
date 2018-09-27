@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
   Order.associate = function(models) {
     Order.belongsTo(models.User, {onDelete: 'cascade'});
     Order.belongsTo(models.Product, {onDelete: 'cascade'});
-    Order.hasMany(models.Payment);
+    Order.belongsTo(models.Payment);
   };
   return Order;
 };
