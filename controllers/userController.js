@@ -7,7 +7,7 @@ class userController {
 
     static registerUser(req, res) {
         User.create(req.body).then(() => {
-            res.redirect('/');
+            res.redirect('/login');
         }).catch((err) => {
             res.send(err.message);
         });
@@ -27,13 +27,13 @@ class userController {
             console.log(user);
             if (user) {
                 req.session.user = {
-                    username:req.body.username,
-                    password:req.body.password
+                    username:user.username,
+                    id:user.id
                 }
                 console.log(req.session.user);
-                res.redirect(`/${req.body.username}/products`);
+                res.redirect(`/products`);
             } else {
-                res.redirect('/users/login');
+                res.redirect('/login');
             }
         }).catch((err) => {
             res.send(err.message);
