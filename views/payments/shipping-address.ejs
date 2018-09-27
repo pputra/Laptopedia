@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="wrapper">
+        <div class="content">
+            <form method="post" action="/users/payment/shipping/options">
+                <label for="street_address">street address:</label><br>
+                <input type="text" name="street_address"><br>
+                <label for="CityId">city/postal code:</label><br>
+                <select name ="CityId">
+                    <% cities.forEach(city => { %>
+                        <option value="<%=city.id%>"><%=city.getFullInfo()%></option>
+                    <% }) %>
+                </select><br><br>
+                courier:<br>
+                <input type="radio" name="courier" value="JNE"> JNE<br>
+                <input type="radio" name="courier" value="POS"> POS<br>
+                <input type="radio" name="courier" value="TIKI"> TIKI
+                <br><br>
+                <button type="submit">Set Address</button>
+            </form>
+        </div>
+    
+    </div>
+    </body>
+</html>

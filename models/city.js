@@ -7,6 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     city_name: DataTypes.STRING,
     postal_code: DataTypes.INTEGER
   }, {});
+
+  City.prototype.getFullInfo = function() {
+    return `${this.city_name}, ${this.province} ${this.postal_code}`;
+  }
+
   City.associate = function(models) {
     City.hasMany(models.Payment);
   };

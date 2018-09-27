@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="content">
+                <h3><%= courier.name %> options: </h3>
+                <form>
+                    
+                    <% courier.costs.forEach(service => { %>
+                        <input type="radio" name="shippingPrice" value="<%=service.cost[0].value%>">
+                        name: <%= service.description %><br>
+                        price: Rp<%= service.cost[0].value %><br>
+                        estimated delivery: <%= service.cost[0].etd %>
+                        <br><br>
+                    <% }) %>
+                
+                    <button type="submit">choose option</button>
+                
+                </form>
+
+            
+            
+            
+            </div>
+        
+        
+        </div>
+
+    </body>
+</html>

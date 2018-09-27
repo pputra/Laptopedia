@@ -24,7 +24,7 @@ class userController {
                 password:req.body.password
             }
         }).then((user) => {
-            console.log(user);
+            console.log('masuk');
             if (user) {
                 req.session.user = {
                     username:user.username,
@@ -33,6 +33,7 @@ class userController {
                 console.log(req.session.user);
                 res.redirect(`/products`);
             } else {
+                console.log('masuk');
                 res.redirect('/login');
             }
         }).catch((err) => {

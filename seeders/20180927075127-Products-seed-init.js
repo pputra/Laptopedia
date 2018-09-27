@@ -10,6 +10,7 @@ module.exports = {
         name: product.name,
         price: product.price,
         picture_source: product.pic_src,
+        weight: product.weight,
         createdAt: new Date(),
         updatedAt: new Date()
       })

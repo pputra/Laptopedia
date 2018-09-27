@@ -1,6 +1,6 @@
 const express = require('express');
-const routes = require('./routes');
-const session = require('express-session')
+const routes = require('./routes/index');
+const session = require('express-session');
 
 
 let app = express();
