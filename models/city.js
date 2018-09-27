@@ -8,7 +8,7 @@ module.exports = (sequelize, DataTypes) => {
     postal_code: DataTypes.INTEGER
   }, {});
   City.associate = function(models) {
-    // associations can be defined here
+    City.belongsTo(models.Payment);
   };
   return City;
 };

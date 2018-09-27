@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     last_name: DataTypes.STRING
   }, {});
   User.associate = function(models) {
-    // associations can be defined here
+    User.belongsToMany(models.Product, {
+      through: models.Order
+    });
   };
   return User;
 };
