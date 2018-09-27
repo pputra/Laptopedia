@@ -8,6 +8,11 @@
     </head>
     <body>
 
+    <ul>
+        <li><a href="/users/edit">edit profile</a></li>
+        <li><a href="/users/order">show orders</a></li>
+        <li><a href="/users/logout">logout</a></li>
+    </ul>
     <div class= "wrapper">
         <div class ="content">
         <% products.forEach(product => { %>
@@ -15,7 +20,12 @@
                 <img src="<%=product.picture_source%>" alt="<%=product.name%>">
                 <div class = "item-menu">
                     name: <%= product.name %><br>
-                    price: Rp <%= product.price %> 
+                    price: Rp <%= product.price %>
+                    <form action="users/order" method="post">
+                        <input type="hidden" name= "ProductId" value="<%=product.id%>">
+                        <input type="hidden" name= "price" value="<%=product.price%>">
+                        <input type="submit" value="add to cart">
+                    </form> 
                 </div>
             
             </div>

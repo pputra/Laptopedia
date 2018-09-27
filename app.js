@@ -12,7 +12,7 @@ app.use(express.urlencoded({extended: false}));
 
 app.use(session({
     secret: 'keyboard dog'
-  }))
+}));
 
 app.use('/', routes);
 
