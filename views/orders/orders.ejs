@@ -9,8 +9,10 @@
     <body>
         <div class= "wrapper">
             <div class ="content">
+            <% let totalPrice = 0 %> 
             <% orders.forEach(order => { %>
                 <% let product = order.Product %> 
+                <% totalPrice += order.price %> 
                 <div class="item-block">
                     <img src="<%=product.picture_source%>" alt="<%=product.name%>">
                     <div class = "item-menu">
@@ -24,6 +26,12 @@
                 </div>
             <% }) %>
             </div>
+            <div class = "bottom_menu">
+            <h3>Total : Rp <%= totalPrice %> </h3>
+            <a href="/users/payment">check out</a>
+            </div>
+
+
         </div>
         
 
