@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
           .then((orders) => {
             orders.forEach(order => {
               order.PaymentId = instance.id;
-              console.log(order);
+              
               order.save();
-              console.log(order);
+              
             });
           }).catch((err) => {
             

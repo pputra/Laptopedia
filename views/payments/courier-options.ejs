@@ -14,11 +14,26 @@
                 <form method="post" action="/users/payment/pay">
                     
                     <% courier.costs.forEach(service => { %>
-                        <input type="radio" name="shippingPrice" value="<%=service.cost[0].value%>">
-                        name: <%= service.description %><br>
-                        price: Rp<%= service.cost[0].value %><br>
-                        estimated delivery: <%= service.cost[0].etd %>
-                        <br><br>
+                        <tr>
+                            <td>
+                            
+                            name: <%= service.description %><br>
+                            price: Rp<%= service.cost[0].value %><br>
+                            estimated delivery: <%= service.cost[0].etd %>
+                            
+                            
+                            </td>
+                            <td>
+                                <input  type="radio" name="shippingPrice" value="<%=service.cost[0].value%>">
+                            
+                            </td>
+                        
+                        </tr>
+
+
+
+                       
+                       
                     <% }) %>
                     <input type="hidden" name= "CityId" value="<%=prevBody.CityId%>">
                     <input type="hidden" name= "street_address" value="<%=prevBody.street_address%>">

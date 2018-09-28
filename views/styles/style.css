@@ -93,6 +93,10 @@ input {
     margin-bottom: 2%;
 }
 
+form {
+    font-size: 10px;
+}
+
 form button {
     background-color: #3F6FAB;
     border: none;
@@ -139,6 +143,11 @@ img {
 
 #cart-options {
     margin: 0 117px;
+}
+
+.index {
+    text-align: center;
+    font-size: 30px;
 }
 
 
