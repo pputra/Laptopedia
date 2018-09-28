@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <%- include('../partials/header-login-from-order.ejs')  %>
+    <div class= "wrapper">
+        <div class ="content">
+        <h3>Purchase History:</h3>
+        <% orders.forEach(order => { %>
+            <% let product = order.Product %> 
+            <div class="item-block">
+                <img src="<%=product.picture_source%>" alt="<%=product.name%>">
+                <div class = "item-menu">
+                    name: <%= product.name %><br>
+                    price: Rp <%= product.price %><br>
+                    date of purchase: Rp <%= product.updatedAt %> 
+                </div>
+            </div>
+        <% }) %>
+        </div>
+        <div class = "bottom_menu">
+        
+        
+
+    </div>
+    </body>
+</html>

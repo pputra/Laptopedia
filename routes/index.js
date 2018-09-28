@@ -2,6 +2,7 @@ const userRoutes = require('./usersRoutes');
 const router = require('express').Router();
 const productRoutes = require('./productRoutes');
 const UserController = require('../controllers/userController');
+const isLogin = require('../helpers/isLogin');
 
 
 router.get('/',(req,res)=>{
@@ -15,21 +16,14 @@ router.get('/login',UserController.showLoginPage);
 router.post('/login', UserController.login);    
 
 router.use('/users', function(req, res, next) {
-    console.log('masuk');
-    if (req.session.user) {
-        next();
-    } else {
-        res.redirect('/login');
-    }
+    
+    isLogin(req, res, next);
+    
 }, userRoutes );
 
 router.use('/products', function (req, res, next) {
-    console.log('masuk');
-    if (req.session.user) {
-        next();
-    } else {
-        res.redirect('/login');
-    }
+   
+    isLogin(req, res, next);
 
 }, productRoutes );
 

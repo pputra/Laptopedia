@@ -41,6 +41,12 @@ class userController {
         });
     }
 
+    static logout(req, res) {
+        req.session.user.username = null;
+        req.session.user.id = null;
+        res.redirect('/');
+    }
+
     
 }
 

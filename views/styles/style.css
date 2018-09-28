@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline-width: 0;
+}
+
+body {
+    width: 100%;
+    background-color: white;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#main-header {
+    background-color: #3F6FAB;
+    color: white;
+    margin-bottom: 10px;
+}
+
+#main-nav {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#main-nav a {
+    margin-bottom: 3%;
+    background-color: #3F6FAB;
+    width: 50%;
+    color: white;
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar a {
+    margin-right: 10px;
+}
+
+.content, table, form {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+table, th, td {
+    border-bottom: 0.2px solid black;
+   
+}
+
+th {
+    background-color: #3F6FAB;
+    color: white;
+    height: 50px;
+}
+
+td {
+  height: 30px;
+}
+
+tr:hover {
+    background-color: rgba(63, 112, 171, 0.342);
+}
+
+.header h1 {
+    text-align: center;
+   
+}
+
+.navbar a, .table-options a {
+    color: #3F6FAB;
+    font-weight: bold;
+}
+
+.table-options  {
+    text-align-last: center;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+form button {
+    background-color: #3F6FAB;
+    border: none;
+    height: 30px;
+    color: white;
+    padding: 10px;
+    border-radius: 5%;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+tr td, tr th {
+    font-size: 10px;
+}
+
+select {
+    width: 100%;
+    background-color: white;
+}
+
+#error-box {
+    background-color: rgb(214, 116, 116);
+    color: rgb(173, 23, 23);
+    font-size: 10px;
+    width: 50%;
+    height: 30px;
+    margin: 0 auto;
+ 
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+.checkout-link {
+    background-color: green;
+    text-align: center;
+    width: 20%;
+    margin: 0 40px;
+}
+
+#cart-options {
+    margin: 0 117px;
+}
+
+
+

@@ -4,23 +4,20 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/styles/style.css" />
     </head>
     <body>
 
-    <ul>
-        <li><a href="/users/edit">edit profile</a></li>
-        <li><a href="/users/order">show orders</a></li>
-        <li><a href="/users/logout">logout</a></li>
-    </ul>
+    <%- include('../partials/header-login.ejs')  %> 
+
     <div class= "wrapper">
         <div class ="content">
         <% products.forEach(product => { %>
             <div class="item-block">
                 <img src="<%=product.picture_source%>" alt="<%=product.name%>">
                 <div class = "item-menu">
-                    name: <%= product.name %><br>
-                    price: Rp <%= product.price %>
+                    name: <%= product.name %><br><br>
+                    price: Rp <%= product.price %><br><br>
                     <form action="users/order" method="post">
                         <input type="hidden" name= "ProductId" value="<%=product.id%>">
                         <input type="hidden" name= "price" value="<%=product.price%>">

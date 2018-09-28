@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+    </head>
+    <body>
+    <%- include('../partials/header-login.ejs')  %>
+        <div class="wrapper">
+            <div class= "content">
+                <h3>Invoice:</h3><br>
+                Invoice Id: <%= payment.id %><br>
+                product cost: <%= payment.cost %><br>
+                shipping cost: <%= payment.shipping_cost %><br>
+                shipping address: <%=payment.street_address%><br>
+            </div>
+            <a href="/products">return home</a>
+        </div>
+    </body>
+</html>
